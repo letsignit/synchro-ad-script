@@ -6,7 +6,7 @@ This sample show you how to make a filter on a group membership.
 "ActiveDirectory": {
     "Users":{
         "Filter":"memberOf -like 'CN=Groupe de test,OU=Groupes de distribution,OU=Utilisateurs,DC=lsidev,DC=local'",
-        "SearchBaseFilter":"DC=lsidev,DC=local"
+        "SearchBase":"DC=lsidev,DC=local"
     }
 }
 ```

@@ -6,7 +6,7 @@ This sample show you how to make a filter on user email.
 "ActiveDirectory": {
     "Users":{
         "Filter":"mail -like '*@domain.com'",
-        "SearchBaseFilter":"DC=lsidev,DC=local"
+        "SearchBase":"DC=lsidev,DC=local"
     }
 }
 ```

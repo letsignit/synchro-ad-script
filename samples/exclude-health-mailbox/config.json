@@ -4,11 +4,11 @@
     "ActiveDirectory": {
         "Users":{
             "Filter":"mail -notlike 'HealthMailbox*'",
-            "SearchBaseFilter":"DC=lsidev,DC=local"
+            "SearchBase":"DC=lsidev,DC=local"
         },
         "Groups":{
             "Filter":"*",
-            "SearchBaseFilter":"DC=lsidev,DC=local"
+            "SearchBase":"DC=lsidev,DC=local"
         }
     }
 }

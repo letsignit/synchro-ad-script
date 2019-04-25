@@ -6,7 +6,7 @@ This sample show you how to exclude health mailbox from users.
 "ActiveDirectory": {
     "Users":{
         "Filter":"mail -notlike 'HealthMailbox*'",
-        "SearchBaseFilter":"DC=lsidev,DC=local"
+        "SearchBase":"DC=lsidev,DC=local"
     }
 }
 ```

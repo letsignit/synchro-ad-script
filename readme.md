@@ -31,15 +31,15 @@ If you want to use this part on a Windows 10, RSAT is required. For more informa
 
 ```
 "ActiveDirectory": {
-        "Users":{
-            "Filter":"mail -like '*@letsignit.com'",
-            "SearchBaseFilter":""
-        },
-        "Groups":{
-            "Filter":"mail -like '*letsignit*'",
-            "SearchBaseFilter":""
-        }
+    "Users":{
+        "Filter":"mail -like '*@letsignit.com'",
+        "SearchBase":""
+    },
+    "Groups":{
+        "Filter":"mail -like '*letsignit*'",
+        "SearchBase":""
     }
+}
 ```
 
 #### Filter
@@ -51,10 +51,11 @@ If you want to create a filter you have to make a filter on ADUser properties us
 "Filter":"*"
 ```
 
-#### SearchBaseFilter
-The SearchBaseFilter is the [Get-ADUSer](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-aduser) or [Get-ADGroup](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-adgroup) SearchBase parameter. Here, you specify an Active Directory 'Distinguished Name' to search under. If you don't specify a SearchBase, the script will get the current Domain DN.
+#### SearchBase
+The SearchBase is the [Get-ADUSer](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-aduser) or [Get-ADGroup](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-adgroup) SearchBase parameter. Here, you specify an Active Directory 'Distinguished Name' to search under. If you don't specify a SearchBase, the script will get the current Domain DN.
+
 ```
-"SearchBaseFilter":"CN=Users,DC=virtualdevlsi,DC=devlsi"
+"SearchBase":"CN=Users,DC=virtualdevlsi,DC=devlsi"
 ```
 
 At this moment you can deploy the script and run it to publish users and groups on  Letsignit.
