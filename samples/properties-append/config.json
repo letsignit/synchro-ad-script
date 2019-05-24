@@ -1,0 +1,18 @@
+{
+    "appId": "fbe699b86c1849f4a2e254a348bb94fc",
+    "appSecret": "R_MKO\"|&p3u7+5\\~G1jH+4dm5)?_|K8B",
+    "ActiveDirectory": {
+        "Users":{
+            "Filter":"*",
+            "SearchBase":"DC=lsidev,DC=local",
+            "PropertiesOverride": [],
+            "PropertiesAppend": ["extensionAttribute1"]
+        },
+        "Groups":{
+            "Filter":"*",
+            "SearchBase":"DC=lsidev,DC=local",
+            "PropertiesOverride": [],
+            "PropertiesAppend": []
+        }
+    }
+}

@@ -33,11 +33,15 @@ If you want to use this part on a Windows 10, RSAT is required. For more informa
 "ActiveDirectory": {
     "Users":{
         "Filter":"mail -like '*@letsignit.com'",
-        "SearchBase":""
+        "SearchBase":"",
+        "PropertiesOverride": [],
+        "PropertiesAppend": []
     },
     "Groups":{
         "Filter":"mail -like '*letsignit*'",
-        "SearchBase":""
+        "SearchBase":"",
+        "PropertiesOverride": [],
+        "PropertiesAppend": []
     }
 }
 ```
@@ -57,6 +61,30 @@ The SearchBase is the [Get-ADUSer](https://docs.microsoft.com/en-us/powershell/m
 ```
 "SearchBase":"CN=Users,DC=virtualdevlsi,DC=devlsi"
 ```
+
+#### PropertiesOverride
+By default, the script will select a list of properties. You can override these and put only the properties you want to synchronize.
+```
+"PropertiesOverride": ["DisplayName", "thumnailPhoto"],
+```
+
+#### PropertiesAppend
+In addition to overriding properties you can append some properties to the default properties. For example, you can use this to synchronize extension attributes.
+```
+"PropertiesAppend": ["extensionAttribute1", "extensionAttribute15"],
+```
+
+**Note:** You have to know that even if you override or append the properties, Letsignit has to synchronize 3 mandatory properties : **DistinguishedName, ObjectGUID, mail** used to identify the user and  **DistinguishedName, ObjectGUID, Members** to identify the group and his members.
+
+
+#### TimeOut
+You can specify a timeout for POST requests. The default value, 0, specifies an indefinite time-out.
+
+```
+"TimeOut":120
+```
+
+
 
 At this moment you can deploy the script and run it to publish users and groups on  Letsignit.
 

@@ -8,3 +8,6 @@ You can find here some samples of usages.
 * [Filter user using group membership](filter-group-membership)
 * [Filter group using email](filter-group-email)
 * [Excluding Exchange Health Mailboxes](exclude-health-mailbox)
+* [Override user properties](properties-override)
+* [Append user properties](properties-append)
+* [Use specific timeo-out](post-timeout)
